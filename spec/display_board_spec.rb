@@ -187,8 +187,7 @@ describe "#display_board in 'lib/display_board.rb" do
       expect(rows[2]).to eq(" 0 | O | O ")
       expect(rows[3]).to eq("-----------")
       expect(rows[4]).to eq(" O | O | O ")
-      output = capture_puts{ display_board(board) } if defined?(diaplay_board)
-      rows = output.split("\n")
+      
       # Can you copy the syntax of the tests above to write a test for a board
       # entirely filled with Os?
 
@@ -197,7 +196,7 @@ describe "#display_board in 'lib/display_board.rb" do
       # example's situation.
 
       # *** Comment the line below by adding a # at the line start ***
-      expect(true).to be(true)
+      #expect(true).to be(true)
     end
   end
 end

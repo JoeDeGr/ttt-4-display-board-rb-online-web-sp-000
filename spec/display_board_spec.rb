@@ -175,7 +175,7 @@ describe "#display_board in 'lib/display_board.rb" do
       #expect(true).to be(true)
     end
 
-    it 'prints an entire board full of Os' do
+   it 'prints an entire board full of Os' do
       
       board = ["O", "O", "O", "O", "O", "O", "O", "O", "O"]
       
@@ -183,9 +183,10 @@ describe "#display_board in 'lib/display_board.rb" do
       rows = output.split("\n")
       
       expect(rows[0]).to eq(" O | O | O ")
-      expect(rows[0]).to eq("-----------")
-      expect(rows[0]).to eq(" 0 | O | O ")
-      expect(rows[0]).to eq()
+      expect(rows[1]).to eq("-----------")
+      expect(rows[2]).to eq(" 0 | O | O ")
+      expect(rows[3]).to eq("-----------")
+      expect(rows[4]).to eq(" O | O | O ")
       output = capture_puts{ display_board(board) } if defined?(diaplay_board)
       rows = output.split("\n")
       # Can you copy the syntax of the tests above to write a test for a board
